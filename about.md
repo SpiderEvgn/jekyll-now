@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+A new Ruby on Rails starter!
+
+2016, let me remember the year when my new life begins. 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Want to know more about me? Just wait and see ...
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)
