@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Postgres 的启动 和 Mac 的开机启动脚本
+title: Postgres 的启动
 ---
 
 记录一个今天遇到的很坑的问题：电脑重启后，postgres 没有重启，于是我去手动启动，然而一直启动失败。
@@ -50,35 +50,4 @@ postgres: invalid argument: "Support/Postgres/var-9.5"
 ```
 pg_ctl -D "~/Library/Application Support/Postgres/var-9.5" -l "~/Library/Application Support/Postgres/var-9.5/postgres-server.log" start
 ```
----
----
-在 Mac 上配置开机启动：(等我下次重启测试好结果再回来补)
-
-~/Library/LaunchAgents
-
-homebrew.mxcl.postgresql.plist
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  <key>KeepAlive</key>
-  <true/>
-  <key>Label</key>
-  <string>homebrew.mxcl.postgresql</string>
-  <key>ProgramArguments</key>
-  <array>
-    <string>/usr/local/opt/postgresql/bin/postgres</string>
-    <string>-D</string>
-    <string>/usr/local/var/postgres</string>
-  </array>
-  <key>RunAtLoad</key>
-  <true/>
-  <key>WorkingDirectory</key>
-  <string>/usr/local</string>
-  <key>StandardErrorPath</key>
-  <string>/usr/local/var/log/postgres.log</string>
-</dict>
-</plist>
-```
+终于启动成功，打开 Postico, 点击 connect, 连接成功！

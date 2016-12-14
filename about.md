@@ -10,7 +10,7 @@ A new Ruby on Rails starter!
 
 ### More Information
 
-Want to know more about me? Just wait and see ...
+Want to know more about me? Just wait and see ... or you can just contact me directly ... I'm open to talk anytime :)
 
 ### Contact me
 
