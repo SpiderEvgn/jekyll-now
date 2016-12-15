@@ -48,6 +48,6 @@ postgres: invalid argument: "Support/Postgres/var-9.5"
 知道错误的原因后，通过以下启动命令成功启动 postgres:
 
 ```
-pg_ctl -D "~/Library/Application Support/Postgres/var-9.5" -l "~/Library/Application Support/Postgres/var-9.5/postgres-server.log" start
+pg_ctl -D "/Users/spiderevgn/Library/Application Support/Postgres/var-9.5" -l "/Users/spiderevgn/Library/Application Support/Postgres/var-9.5/postgres-server.log" start
 ```
 终于启动成功，打开 Postico, 点击 connect, 连接成功！

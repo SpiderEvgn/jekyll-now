@@ -14,4 +14,5 @@ Want to know more about me? Just wait and see ... or you can just contact me dir
 
 ### Contact me
 
+Wechat: 13916247381
 [xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)
