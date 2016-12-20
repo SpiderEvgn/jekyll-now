@@ -5,8 +5,8 @@ title: 从 零 开始搭建基于 PHP 的 Laravel 环境
 
 在 Mac 上，Laravel 的环境有两种配置方式：Homestead 和 Valet, 这里只介绍 [Homestead](https://laravel.com/docs/5.3/homestead), Laravel 官网有详细的教程，我这里用中文做一个简要的说明：
 
-* #### 下载安装 VirtualBox
-* #### 下载安装 vagrant
+* #### 下载安装 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* #### 下载安装 [vagrant](https://www.vagrantup.com/downloads.html)
 * #### 下载 vagrant 的 Laravel/homestead 虚拟机
 
 ```
@@ -108,8 +108,9 @@ Notice: Use of undefined constant MCRYPT_RIJNDAEL_128 - assumed 'MCRYPT_RIJNDAEL
 [https://github.com/laravel/framework/issues/3602](https://github.com/laravel/framework/issues/3602)    
 [https://laravel-china.org/topics/1485](https://laravel-china.org/topics/1485)
 
+我采用的方法是把 config/database.php 的 mysql 配置项 strict 设置改为 true，错误修复。
 
-* 网页打开项目时报错：`Use of undefined constant MCRYPT_RIJNDAEL_128 - assumed 'MCRYPT_RIJNDAEL_128'`
+* 然后网页打开项目时报错：`Use of undefined constant MCRYPT_RIJNDAEL_128 - assumed 'MCRYPT_RIJNDAEL_128'`
 
 网上有很多相关讨论，我的解决方法如下：
 
@@ -121,12 +122,14 @@ mcrypt
 memcached
 ```
 
-* 网页打开项目时报错：`PHP7.1 and Laravel 5.3: Function mcrypt_get_iv_size() is deprecated`
+* 网页打开项目又有新的报错：`PHP7.1 and Laravel 5.3: Function mcrypt_get_iv_size() is deprecated`
 
 参考以下两篇评论：
 
 [https://github.com/AsgardCms/Platform/issues/271](https://github.com/AsgardCms/Platform/issues/271)
 [http://stackoverflow.com/questions/41031076/php7-1-and-laravel-5-3-function-mcrypt-get-iv-size-is-deprecated](http://stackoverflow.com/questions/41031076/php7-1-and-laravel-5-3-function-mcrypt-get-iv-size-is-deprecated)
+
+应该是最新版本 php 的问题，12月份才 release，还未找到针对 php7.1 明确的解决办法，用老版本的 php 就 ok 了。
 
 ---
 ---
@@ -135,15 +138,11 @@ memcached
 
 * 用 Laravel 建立一个 simple Blog 的小例子：
 [http://www.findalltogether.com/tutorial/simple-blog-application-in-laravel-5/](http://www.findalltogether.com/tutorial/simple-blog-application-in-laravel-5/)
-
 * Laravel 的中文文档：
 [http://laravelacademy.org/post/5744.html](http://laravelacademy.org/post/5744.html)
-
 * 一个对 vagrant 的简要介绍：
 [https://segmentfault.com/a/1190000000264347](https://segmentfault.com/a/1190000000264347)
-
 * 知乎上对 vagrant 和 docker 精彩的比较
 [https://www.zhihu.com/question/32324376](https://www.zhihu.com/question/32324376)
-
 * 论述 Django vs Laravel vs Rails：
 [http://www.findalltogether.com/post//django-vs-laravel-vs-rails/](http://www.findalltogether.com/post//django-vs-laravel-vs-rails/)

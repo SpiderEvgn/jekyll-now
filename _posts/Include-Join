@@ -15,9 +15,5 @@ title: Include vs Join
 ## 参考资料：
 
 * [http://railscasts.com/episodes/181-include-vs-joins?autoplay=true](http://railscasts.com/episodes/181-include-vs-joins?autoplay=true)
-
 * [http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/](http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/)
-
-* [http://railscasts.com/episodes/181-include-vs-joins?autoplay=true](http://railscasts.com/episodes/181-include-vs-joins?autoplay=true)
-
 * [http://stackoverflow.com/questions/1208636/rails-include-vs-joins](http://stackoverflow.com/questions/1208636/rails-include-vs-joins)
