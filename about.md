@@ -10,9 +10,9 @@ A new Ruby on Rails starter!
 
 ### More Information
 
-Want to know more about me? Just wait and see ... or you can just contact me directly ... I'm open to talk anytime :)
+Want to know more about me? Just wait and see ... or you can contact me directly ... I'm open to talk anytime :)
 
 ### Contact me
 
-Wechat: 13916247381
-[xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)
+Wechat: 13916247381         
+email:   [xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)
