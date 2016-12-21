@@ -16,7 +16,7 @@ title: instance_eval 和 class_eval
 
 话不多说，先通过两个例子比较一下 instance_eval 和 class_eval：
 
-```
+```ruby
 class MyClass
     def initialize
         @v = 1
@@ -37,7 +37,7 @@ obj.show                 # => "obj is showing"
 ```
 在这个例子中，instance_eval 方法打开了 obj 这个对象，可以看到 self 的内容就是 obj，在 obj 这个作用域内定义的方法 show 就成为了 obj 的单件方法。
 
-```
+```ruby
 def add_method_to(a_class)
     a_class.class_eval do
         def show

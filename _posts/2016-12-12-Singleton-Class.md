@@ -9,7 +9,7 @@ title: 单件类、单件方法 和 class << obj
 
 比如我们有一个 Person 类，Person 类有一个对象 aaron, Person类还有实例方法 hear 和 see, 显然，所有 Person 的实例对象都可以调用 hear 和 see 方法，包括 aaron。但是，如果我只想让 aaron 可以 talk，就不能在 Person 类中定义实例方法，这样，所有对象就都能 talk 了。解决方案就是，定义 aaron 对象的 *单件方法*:
 
-```
+```ruby
 class Person
     def hear
         'hear'
@@ -36,14 +36,14 @@ aaron.methods(false)                   # => [:talk]   (false 表示只显示自�
 ---
 ruby 中 **单件类**（singleton class，或者叫单例类）是个很特殊的类，像 `Object#class` 这样的方法会小心翼翼地把单件类隐藏起来。 不过 Ruby 提供了一种特殊的基于 class 关键字的语法，可以让你进入该单件类的作用域：
 
-```
+```ruby
 class << aaron
     # your code
 end
 ```
 如果想获得这个单件类的引用，可以在离开该作用域时返回 self
 
-```
+```ruby
 aaron = Person.new
 
 singleton_class = class << aaron
@@ -54,7 +54,7 @@ singleton_class                # => #<Class:#<Person:0x007fe42485bc80>>
 ```
 用 `class <<` 方法最直接的打开了单件类的作用域，由此得到了第二种定义单件方法的方式：
 
-```
+```ruby
 class << aaron
     def cry
         # do something
@@ -65,7 +65,7 @@ aaron.methods(false)                   # => [:talk, :cry]
 ```
 此外，Ruby 还提供了一个更加方便的语法 `Object#singleton_class` 来获取单件类:
 
-```
+```ruby
 aaron.singleton_class                           # => #<Class:#<Person:0x007fe42485bc80>> 
 aaron.singleton_class.instance_methods(false)   # => [:talk, :shout] 
 aaron.singleton_class.superclass                # => Person
@@ -82,7 +82,7 @@ aaron.singleton_class.superclass                # => Person
 
 `1.` 不推荐，因为显式重复了类名，会给重构带来不便
 
-```
+```ruby
 def Person.class_method
     # do something
 end
@@ -90,7 +90,7 @@ end
 
 `2.` 比较常用，在类体中用 self 指明接受者作为类本身，本质上和第一种方法相同
 
-```
+```ruby
 class Person
     self.class_method
         # do something
@@ -100,7 +100,7 @@ end
 
 `3.` 比较常用，但是意义与上两种完全不同，虽然和第二种一样定义在类体中，但是 `class <<` 方法直接打开了该类的单件类的作用域。这种方式在定义大量类方法的时候非常方便。
 
-```
+```ruby
 class Person
     class << self
         def class_method

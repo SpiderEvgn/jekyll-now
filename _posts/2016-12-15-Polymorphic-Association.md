@@ -7,7 +7,7 @@ Polymorphic Association（多态关联）这个名字听上去很高大上，好
 
 多态关联这个概念非常简单，举一个简单的小例子就明白了：
 
-```
+```ruby
 class Comment < ApplicationRecord
 end
 
@@ -24,7 +24,7 @@ end
 
 那么如果做到呢？我们来看 Rails 的具体实现：
 
-```
+```ruby
 class Comment < ApplicationRecord
     belongs_to :commentable, polymorphic: true
 end
@@ -41,7 +41,7 @@ end
 
 秘诀就是新增一个字段: commentable_type。来看 migration:
 
-```
+```ruby
 class CreateComments < ActiveRecord::Migration
     def change
         create_table :comments do |t|
@@ -58,7 +58,7 @@ end
 
 看一下 console 中的实际结果：
 
-```
+```ruby
 article = Article.first
 comment_a = article.comments.create(content: "First Article Comment")
 

@@ -9,13 +9,13 @@ title: 从 零 开始搭建基于 PHP 的 Laravel 环境
 * #### 下载安装 [vagrant](https://www.vagrantup.com/downloads.html)
 * #### 下载 vagrant 的 Laravel/homestead 虚拟机
 
-```
+```shell
 vagrant box add laravel/homestead
 ```
 
 * #### 下载 Homestead
 
-```
+```shell
 cd ~
 git clone https://github.com/laravel/homestead.git Homestead
 ```
@@ -54,7 +54,7 @@ http://homestead.app
 
 进入 vagrant/Laravel box：
 
-```
+```shell
 $ vagrant ssh
 Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-51-generic x86_64)
 
@@ -88,7 +88,7 @@ vagrant@homestead:~$
 
 第一次跑 migrate 的时候报错：
 
-```
+```shell
 vagrant@homestead:~/Code/blog$ php artisan migrate
 PHP Notice:  Use of undefined constant MCRYPT_RIJNDAEL_128 - assumed 'MCRYPT_RIJNDAEL_128' in /home/vagrant/Code/blog/config/app.php on line 83
 
@@ -114,7 +114,7 @@ Notice: Use of undefined constant MCRYPT_RIJNDAEL_128 - assumed 'MCRYPT_RIJNDAEL
 
 网上有很多相关讨论，我的解决方法如下：
 
-```
+```shell
 vagrant@homestead:~$ sudo apt-get update
 vagrant@homestead:~$ sudo apt-get install php7-mcrypt
 vagrant@homestead:~$ php -m | grep mc
