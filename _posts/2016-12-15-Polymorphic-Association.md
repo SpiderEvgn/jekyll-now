@@ -22,7 +22,7 @@ end
 
 > 当一个模型需要同时属于其他多个模型的时候，使用多态关联（polymorphic）。
 
-那么如果做到呢？我们来看 Rails 的具体实现：
+那么如何做到呢？我们来看 Rails 的具体实现：
 
 ```ruby
 class Comment < ApplicationRecord

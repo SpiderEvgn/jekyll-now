@@ -15,4 +15,4 @@ Want to know more about me? Just wait and see ... or you can contact me directly
 ### Contact me
 
 Wechat: 13916247381         
-email:   [xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)
+E-mail: [xiajun.zhang@usingnow.com](mailto:xiajun.zhang@usingnow.com)

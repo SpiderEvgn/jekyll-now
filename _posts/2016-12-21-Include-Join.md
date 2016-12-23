@@ -250,5 +250,6 @@ ActiveRecord::ConfigurationError: Can't join 'Post' to association named 'groups
 * [http://guides.rubyonrails.org/active_record_querying.html#joins](http://guides.rubyonrails.org/active_record_querying.html#joins)
 * [http://www.cnblogs.com/pcjim/articles/799302.html](http://www.cnblogs.com/pcjim/articles/799302.html)
 * [http://railscasts.com/episodes/181-include-vs-joins?autoplay=true](http://railscasts.com/episodes/181-include-vs-joins?autoplay=true)
+* [http://blog.bigbinary.com/2013/07/01/preload-vs-eager-load-vs-joins-vs-includes.html](http://blog.bigbinary.com/2013/07/01/preload-vs-eager-load-vs-joins-vs-includes.html)
 * [http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/](http://tomdallimore.com/blog/includes-vs-joins-in-rails-when-and-where/)
 * [http://stackoverflow.com/questions/1208636/rails-include-vs-joins](http://stackoverflow.com/questions/1208636/rails-include-vs-joins)
