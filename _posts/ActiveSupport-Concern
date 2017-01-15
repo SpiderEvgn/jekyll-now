@@ -25,3 +25,6 @@ end
 B.foo                                                然后就可以这样用了，非常方便
 B.foo2
 B.new.bar
+
+
+http://xiewenwei.github.io/blog/2014/01/13/how-activesupport-corncern-work/
